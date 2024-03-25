@@ -134,14 +134,14 @@ img {
     transform: translateY(0) scale(1);
   }
   10% {
-    opacity: 1; /* Hacer que los corazones comiencen a aparecer gradualmente desde el principio */
+    opacity: 1;
   }
   90% {
-    transform: translateY(-300px) scale(2); /* Hacer que los corazones se muevan hacia arriba */
+    transform: translateY(-300px) scale(2);
   }
   100% {
     opacity: 0;
-    transform: translateY(-900px) scale(2);
+    transform: translateY(-400px) scale(2);
   }
 }
 

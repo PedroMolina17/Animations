@@ -11,11 +11,11 @@ document.addEventListener("DOMContentLoaded", function () {
     hearts.forEach((heart, index) => {
       setTimeout(() => {
         heart.style.opacity = 1;
-        heart.style.animation = "heartAnimation 2s ease forwards";
+        heart.style.animation = "heartAnimation 7s ease forwards";
         setTimeout(() => {
           heart.style.animation = "heartReturnAnimation 1s ease forwards";
-        }, 1000);
-      }, index * 100);
+        }, 8000);
+      }, index * 300);
     });
   }
 
@@ -24,13 +24,13 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   function moveCardDown() {
-    card.style.animation = "cardDownAnimation 1s ease forwards";
+    card.style.animation = "cardDownAnimation 2s ease forwards";
   }
 
   enviarButton.addEventListener("click", function () {
-    envelope.classList.toggle("open");
-    triangleTop.classList.toggle("open");
-    triangleTop.classList.toggle("closed");
+    envelope.classList.add("open");
+    triangleTop.classList.add("open");
+    triangleTop.classList.add("closed");
     if (envelope.classList.contains("open")) {
       showHearts();
       moveCardUp();
@@ -40,11 +40,13 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   resetButton.addEventListener("click", function () {
-    envelope.classList.remove("open");
-    triangleTop.classList.remove("open");
-    triangleTop.classList.add("closed");
-    setTimeout(() => {
+    envelope.classList.add("open");
+    if (envelope.classList.contains("open")) {
       moveCardDown();
-    }, 1000); // Agrega un retraso para que la carta se mueva hacia abajo después de cambiar la clase del triángulo
+      setTimeout(() => {
+        triangleTop.classList.remove("closed");
+        triangleTop.classList.remove("open");
+      }, 1000);
+    }
   });
 });
