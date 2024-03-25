@@ -1,0 +1,68 @@
+body {
+  background-color: rgb(241, 239, 236);
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  height: 100vh;
+}
+
+.container {
+  position: relative;
+}
+
+button {
+  background-color: #a3c5f8;
+  border-radius: 15%;
+  border: none;
+  height: 45px;
+  width: 85px;
+  font-size: large;
+  color: white;
+  transition: transform 2s;
+}
+
+button {
+  position: relative;
+}
+
+.notification,
+.second-notification,
+.third-notification {
+  position: absolute;
+  top: 10px;
+  width: 20px;
+  height: 20px;
+  background-size: cover;
+  transform: scale(0);
+  transition: transform 1s;
+}
+
+.notification {
+  right: 5px;
+  background-image: url("../images/cuadra (1).png");
+}
+
+.second-notification {
+  left: 5px;
+  top: 20px;
+  background-image: url("../images/3d.png");
+}
+
+.third-notification {
+  left: 10px;
+  top: -10px;
+  background-image: url("../images/cubo-3d (1).png");
+}
+
+button:hover {
+  transform: scale(2);
+  transition: transform 2s;
+}
+
+button:hover .notification,
+button:hover .second-notification,
+button:hover .third-notification {
+  display: block;
+  transform: scale(1);
+  transition: transform 1s;
+}
