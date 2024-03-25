@@ -1,0 +1,164 @@
+body {
+  background-color: #fad7df;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+}
+
+button {
+  width: 85px;
+  height: 30px;
+  margin-top: 10px;
+  background: transparent;
+  color: #f46569;
+  border-color: #f46569;
+}
+
+img {
+  width: 100px;
+  height: 100px;
+}
+
+.envelope {
+  position: relative;
+  height: 180px;
+  width: 240px;
+  background: white;
+}
+
+.card {
+  padding: 4px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-direction: column;
+  top: 0px;
+  z-index: 10;
+  left: calc(50% - 80px);
+  width: 160px;
+  height: 180px;
+  background-color: #fcc2cb;
+}
+
+.triangle.top {
+  position: absolute;
+  top: 0;
+  border-top: 90px solid #f46569;
+  border-left: 120px solid transparent;
+  border-right: 120px solid transparent;
+  transform-origin: top;
+  transition: 2s ease;
+  z-index: 20;
+}
+
+.triangle.left {
+  left: 0;
+  top: 0;
+  position: absolute;
+  border-bottom: 90px solid transparent;
+  border-left: 120px solid #fa9ea1;
+  border-top: 90px solid transparent;
+  z-index: 20;
+}
+
+.triangle.right {
+  right: 0;
+  top: 0;
+  position: absolute;
+  border-bottom: 90px solid transparent;
+  border-right: 120px solid #fa9ea1;
+  border-top: 90px solid transparent;
+  z-index: 20;
+}
+
+.triangle.bottom {
+  position: absolute;
+  border-bottom: 90px solid #ff858a;
+  bottom: 0;
+  border-left: 120px solid transparent;
+  border-right: 120px solid transparent;
+  z-index: 20;
+}
+
+.triangle.top.open {
+  transform: rotateX(0deg);
+  z-index: -10;
+}
+
+.triangle.top.closed {
+  transform: rotateX(-180deg);
+  animation-delay: 10s;
+}
+
+.heart {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  opacity: 0;
+  left: 40px;
+  z-index: 10;
+  background-image: url("https://images.vexels.com/media/users/3/216360/isolated/preview/977370876a64c9dccfe43f06e1cfa0d5-doodle-de-corazon-rojo.png"); /* Ruta de tu imagen de corazón */
+  background-size: cover;
+}
+.heart:nth-child(1) {
+  top: 90px;
+  right: 0px;
+}
+
+.heart:nth-child(2) {
+  top: 60px;
+  left: 200px;
+}
+
+.heart:nth-child(3) {
+  top: 70px;
+  left: 150px;
+}
+
+.heart:nth-child(4) {
+  top: 70px;
+  right: 5px;
+}
+
+.heart:nth-child(5) {
+  top: 90px;
+  left: 110px;
+}
+
+@keyframes heartAnimation {
+  0% {
+    opacity: 0;
+    transform: translateY(0) scale(1);
+  }
+  10% {
+    opacity: 1; /* Hacer que los corazones comiencen a aparecer gradualmente desde el principio */
+  }
+  90% {
+    transform: translateY(-300px) scale(2); /* Hacer que los corazones se muevan hacia arriba */
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-900px) scale(2);
+  }
+}
+
+@keyframes cardUpAnimation {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-70px);
+  }
+}
+
+@keyframes cardDownAnimation {
+  0% {
+    transform: translateY(-70px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
