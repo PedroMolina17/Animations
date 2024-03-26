@@ -1,3 +1,4 @@
+//Leer los elementos del DOM
 document.addEventListener("DOMContentLoaded", function () {
   const envelope = document.querySelector(".envelope");
   const triangleTop = document.querySelector(".triangle.top");
@@ -18,7 +19,7 @@ document.addEventListener("DOMContentLoaded", function () {
       }, index * 300);
     });
   }
-
+  // Funciónes para Mover Carta
   function moveCardUp() {
     card.style.animation = "cardUpAnimation 2s ease forwards";
   }
@@ -27,6 +28,7 @@ document.addEventListener("DOMContentLoaded", function () {
     card.style.animation = "cardDownAnimation 2s ease forwards";
   }
 
+  //Evento para el boton Enviar
   enviarButton.addEventListener("click", function () {
     envelope.classList.add("open");
     triangleTop.classList.add("open");
@@ -34,11 +36,10 @@ document.addEventListener("DOMContentLoaded", function () {
     if (envelope.classList.contains("open")) {
       showHearts();
       moveCardUp();
-    } else {
-      moveCardDown();
     }
   });
 
+  //Evento para el boton cerrar
   resetButton.addEventListener("click", function () {
     envelope.classList.add("open");
     if (envelope.classList.contains("open")) {

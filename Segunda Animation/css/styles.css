@@ -5,6 +5,7 @@ body {
   align-items: center;
   flex-direction: column;
   height: 100vh;
+  gap: 8px;
 }
 
 button {
@@ -14,6 +15,10 @@ button {
   background: transparent;
   color: #f46569;
   border-color: #f46569;
+}
+button:hover {
+  background-color: #f46569;
+  color: white;
 }
 
 img {
@@ -26,6 +31,7 @@ img {
   height: 180px;
   width: 240px;
   background: white;
+  box-shadow: 8px 8px 8px #e36b6f;
 }
 
 .card {
@@ -39,8 +45,9 @@ img {
   z-index: 10;
   left: calc(50% - 80px);
   width: 160px;
-  height: 180px;
+  height: 140px;
   background-color: #fcc2cb;
+  box-shadow: 2px 2px 4px #e9282f;
 }
 
 .triangle.top {
@@ -100,9 +107,10 @@ img {
   opacity: 0;
   left: 40px;
   z-index: 10;
-  background-image: url("https://images.vexels.com/media/users/3/216360/isolated/preview/977370876a64c9dccfe43f06e1cfa0d5-doodle-de-corazon-rojo.png"); /* Ruta de tu imagen de corazón */
+  background-image: url("https://images.vexels.com/media/users/3/216360/isolated/preview/977370876a64c9dccfe43f06e1cfa0d5-doodle-de-corazon-rojo.png");
   background-size: cover;
 }
+
 .heart:nth-child(1) {
   top: 90px;
   right: 0px;
@@ -117,15 +125,29 @@ img {
   top: 70px;
   left: 150px;
 }
-
 .heart:nth-child(4) {
+  top: 70px;
+  left: 150px;
+}
+
+.heart:nth-child(5) {
   top: 70px;
   right: 5px;
 }
 
-.heart:nth-child(5) {
+.heart:nth-child(6) {
   top: 90px;
-  left: 110px;
+  left: 55px;
+}
+
+.heart:nth-child(7) {
+  top: 90px;
+  left: 55px;
+}
+
+.heart:nth-child(8) {
+  top: 90px;
+  left: 100px;
 }
 
 @keyframes heartAnimation {

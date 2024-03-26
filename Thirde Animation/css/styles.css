@@ -1,0 +1,55 @@
+body {
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
+
+.toggle {
+  display: inline-block;
+  position: relative;
+  width: 200px;
+  height: 80px;
+}
+
+.toggle input {
+  display: none;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 80px;
+  background-image: url("../images/f3ef1d35037ab5021a7e0ec75aae19fe.gif");
+  background-position: center right;
+  background-size: 200px;
+  border-radius: 34px;
+  transition: background-image 2s ease-in-out;
+}
+
+.slider-image {
+  width: 80px;
+  height: 100%;
+  border-radius: 34px;
+  transition: 1s ease-in-out;
+}
+
+input:checked + .slider {
+  background-image: url("../images/ae0ce7ad5b77cf692b66e16944474a1d.gif");
+  transition: background-image 0.4s;
+  background-position: center left;
+  background-size: 180px;
+  background-color: #2196f3;
+  transition: background-image 2s ease-in-out;
+}
+
+input:checked + .slider .slider-image {
+  transform: translateX(120px);
+}
+
+input:checked + .slider .slider-image {
+  content: url("https://i.pinimg.com/originals/15/57/a2/1557a2eb0e8ee5106a4bab765e3a21bd.png");
+}
