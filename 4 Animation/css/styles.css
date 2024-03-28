@@ -1,0 +1,49 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.bodyPig {
+  background-color: rgb(241, 197, 227);
+  width: 300px;
+  height: 150px;
+  position: relative;
+  transform: rotateX(-8deg) rotateY(-8deg);
+}
+
+.headerPig {
+  background-color: rgb(241, 197, 227);
+  width: 150px;
+  height: 150px;
+  position: absolute;
+  bottom: 100%;
+  right: 100%;
+}
+
+.headerPig2 {
+  background-color: rgb(241, 197, 227);
+  width: 150px;
+  height: 150px;
+  position: absolute;
+  bottom: 90%;
+  right: 90%;
+}
+
+.leftFoot {
+  background-color: rgb(241, 197, 227);
+  width: 100px;
+  height: 150px;
+  position: absolute;
+  top: 100%;
+}
+
+.rightFoot {
+  background-color: rgb(241, 197, 227);
+  width: 100px;
+  height: 150px;
+  position: absolute;
+  top: 100%;
+  left: 75%;
+}
