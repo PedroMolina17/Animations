@@ -3,47 +3,143 @@ body {
   justify-content: center;
   align-items: center;
   height: 100vh;
+  overflow: hidden;
 }
 
-.bodyPig {
+.cubo-head {
   background-color: rgb(241, 197, 227);
-  width: 300px;
-  height: 150px;
+  width: 200px;
+  height: 200px;
   position: relative;
-  transform: rotateX(-8deg) rotateY(-8deg);
+  transform-style: preserve-3d;
+  transform: rotateZ(100deg) rotateX(-140deg) rotateY(190deg);
 }
 
-.headerPig {
-  background-color: rgb(241, 197, 227);
-  width: 150px;
-  height: 150px;
+.cara {
   position: absolute;
-  bottom: 100%;
-  right: 100%;
+  width: 200px;
+  height: 200px;
+  border: 1px solid #000;
+  text-align: center;
+  line-height: 200px;
+  font-size: 20px;
+  background-color: rgb(253, 186, 165);
 }
 
-.headerPig2 {
-  background-color: rgb(241, 197, 227);
-  width: 150px;
-  height: 150px;
-  position: absolute;
-  bottom: 90%;
-  right: 90%;
+.cara-frontal {
+  transform: translateZ(100px);
 }
 
-.leftFoot {
-  background-color: rgb(241, 197, 227);
-  width: 100px;
-  height: 150px;
+.cara-superior {
+  transform: rotateX(90deg) translateZ(100px);
   position: absolute;
-  top: 100%;
 }
 
-.rightFoot {
-  background-color: rgb(241, 197, 227);
-  width: 100px;
-  height: 150px;
+.cara-trasera {
+  transform: rotateY(180deg) translateZ(100px);
+}
+
+.cara-inferior {
+  transform: rotateX(-90deg) translateZ(100px);
+}
+
+.cara-izquierda {
+  transform: rotateY(-90deg) translateZ(100px);
+}
+
+.cara-derecha {
+  transform: rotateY(90deg) translateZ(100px);
+}
+
+.ojo-container-right {
   position: absolute;
-  top: 100%;
-  left: 75%;
+  top: 0%;
+  left: 50%;
+}
+
+.ojo-right {
+  width: 25px;
+  height: 50px;
+  background-color: white;
+}
+
+.pupila-right {
+  width: 25px;
+  height: 25px;
+  background-color: black;
+  position: absolute;
+  top: 0%;
+}
+
+.ojo-container-left {
+  position: absolute;
+  top: 75%;
+  left: 50%;
+}
+
+.ojo-left {
+  width: 25px;
+  height: 50px;
+  background-color: white;
+}
+
+.pupila-left {
+  width: 25px;
+  height: 25px;
+  background-color: black;
+  position: absolute;
+  top: 50%;
+}
+
+.cubo-body {
+  width: 200px; /* Ancho del cubo */
+  height: 200px; /* Alto del cubo */
+  position: relative;
+  bottom: 50px;
+  left: 150px;
+  z-index: -10;
+  transform-style: preserve-3d;
+  transform: rotateZ(100deg) rotateX(155deg) rotateY(170deg);
+}
+
+.cara-body {
+  position: absolute;
+  background-color: rgb(253, 186, 165);
+  border: 1px solid #000;
+}
+
+.cara-body.cara-frontal {
+  width: 200px; /* Ancho del cubo */
+  height: 200px; /* Alto del cubo */
+  transform: translateZ(250px); /* Profundidad del cubo */
+}
+
+.cara-body.cara-trasera {
+  width: 200px; /* Ancho del cubo */
+  height: 200px; /* Alto del cubo */
+  transform: rotateY(180deg) translateZ(250px); /* Profundidad del cubo */
+}
+
+.cara-body.cara-inferior {
+  width: 200px; /* Ancho del cubo */
+  height: 500px; /* Profundidad del cubo */
+  transform: rotateX(90deg) translateZ(250px); /* La mitad de la profundidad */
+}
+
+.cara-body.cara-superior {
+  width: 200px; /* Ancho del cubo */
+  height: 500px; /* Profundidad del cubo */
+  transform: rotateX(-90deg) translateZ(-50px); /* La mitad de la profundidad */
+}
+
+.cara-body.cara-izquierda {
+  width: 500px; /* Ancho del cubo */
+  height: 200px; /* Alto del cubo */
+  transform: rotateY(-90deg) translateZ(250px); /* La mitad de la profundidad */
+}
+
+.cara-body.cara-derecha {
+  width: 500px; /* Ancho del cubo */
+  height: 200px; /* Alto del cubo */
+  transform: rotateY(90deg) translateZ(-50px); /* La mitad de la profundidad */
 }
