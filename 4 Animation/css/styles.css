@@ -6,13 +6,23 @@ body {
   overflow: hidden;
 }
 
+.pig {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* 
+Cabeza
+*/
 .cubo-head {
   background-color: rgb(241, 197, 227);
   width: 200px;
   height: 200px;
+  top: -200px;
   position: relative;
   transform-style: preserve-3d;
   transform: rotateZ(100deg) rotateX(-140deg) rotateY(190deg);
+  /* animation: movehead 5s infinite linear; */
 }
 
 .cara {
@@ -91,12 +101,72 @@ body {
   top: 50%;
 }
 
+/* Boca*/
+/* Boca*/
+.cubo-mouth-outer {
+  position: absolute;
+  top: 90px; /* Ajustar según sea necesario para alinear con la parte superior del cubo de la cabeza */
+  left: 30px; /* Ajustar según sea necesario */
+  width: 100px; /* Ancho del cubo de la boca */
+  height: 60px; /* Alto del cubo de la boca */
+  transform-style: preserve-3d;
+  transform-origin: top;
+  transform: rotateZ(190deg) rotateX(-100deg) rotateY(100deg) translateZ(10px); /* Agrega una traslación en Z para que el cubo sobresalga */
+}
+
+.cubo-mouth {
+  width: 100%;
+  height: 100%;
+  background-color: rgb(241, 197, 227); /* Color del cubo de la boca */
+  transform-style: preserve-3d;
+}
+
+.cara-mouth {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(253, 186, 165);
+  border: 1px solid #000;
+  box-sizing: border-box; /* Incluye el borde en las dimensiones */
+}
+
+.cara-mouth.cara-frontal {
+  transform: translateZ(0px); /* Mueve la cara al centro del cubo */
+}
+
+.cara-mouth.cara-trasera {
+  transform: rotateY(180deg) translateZ(0px); /* Mueve la cara al centro del cubo */
+}
+
+.cara-mouth.cara-superior {
+  transform: rotateX(-90deg) translateZ(25px); /* Mueve la cara al centro del cubo */
+}
+
+.cara-mouth.cara-inferior {
+  transform: rotateX(90deg) translateZ(25px); /* Mueve la cara al centro del cubo */
+}
+
+.cara-mouth.cara-izquierda {
+  width: 60px;
+  height: 40px;
+  transform: rotateY(-90deg) translateZ(30px); /* Mueve la cara al centro del cubo */
+}
+
+.cara-mouth.cara-derecha {
+  width: 60px;
+  height: 40px;
+  transform: rotateY(90deg) translateZ(70px); /* Mueve la cara al centro del cubo */
+}
+
+/* 
+ Cuerpo 
+*/
 .cubo-body {
-  width: 200px; /* Ancho del cubo */
-  height: 200px; /* Alto del cubo */
+  width: 200px;
+  height: 200px;
   position: relative;
   bottom: 50px;
-  left: 150px;
+  left: -50px;
   z-index: -10;
   transform-style: preserve-3d;
   transform: rotateZ(100deg) rotateX(155deg) rotateY(170deg);
@@ -127,9 +197,36 @@ body {
 }
 
 .cara-body.cara-superior {
+  background-image: linear-gradient(to bottom, #fdbaa5, #fdbaa5);
+  position: absolute;
   width: 200px; /* Ancho del cubo */
   height: 500px; /* Profundidad del cubo */
   transform: rotateX(-90deg) translateZ(-50px); /* La mitad de la profundidad */
+}
+
+.cara-body.cara-superior .line {
+  position: absolute;
+  background-color: #f79d81;
+  width: 30px;
+  height: 400px;
+  bottom: 70px;
+  right: 40px;
+}
+.cara-body.cara-superior .line2 {
+  position: absolute;
+  background-color: #f79d81;
+  width: 30px;
+  height: 200px;
+  bottom: 180px;
+  right: 90px;
+}
+.cara-body.cara-superior .line3 {
+  position: absolute;
+  background-color: #f79d81;
+  width: 30px;
+  height: 300px;
+  bottom: 140px;
+  right: 140px;
 }
 
 .cara-body.cara-izquierda {
@@ -143,3 +240,96 @@ body {
   height: 200px; /* Alto del cubo */
   transform: rotateY(90deg) translateZ(-50px); /* La mitad de la profundidad */
 }
+
+/*Pies 
+ */
+
+.cubo-foot-right {
+  left: -290px;
+  top: 70px;
+  z-index: -20;
+  width: 100px; /* Ancho del cubo */
+  height: 200px; /* Alto del cubo */
+  position: relative;
+  transform-style: preserve-3d;
+  transform: rotateZ(90deg) rotateX(-130deg) rotateY(80deg);
+}
+.cubo-foot-left {
+  top: 90px;
+  left: -290px;
+  z-index: -20;
+  width: 100px; /* Ancho del cubo */
+  height: 200px; /* Alto del cubo */
+  position: relative;
+  transform-style: preserve-3d;
+  transform: rotateZ(90deg) rotateX(-130deg) rotateY(80deg);
+}
+.cubo-foot-right-back {
+  top: 60px;
+  left: -250px;
+  z-index: -20;
+  width: 100px; /* Ancho del cubo */
+  height: 200px; /* Alto del cubo */
+  position: relative;
+  transform-style: preserve-3d;
+  transform: rotateZ(90deg) rotateX(-130deg) rotateY(80deg);
+}
+.cubo-foot-left-back {
+  top: 40px;
+  left: -380px;
+  z-index: -30;
+  width: 100px; /* Ancho del cubo */
+  height: 200px; /* Alto del cubo */
+  position: relative;
+  transform-style: preserve-3d;
+  transform: rotateZ(90deg) rotateX(-130deg) rotateY(80deg);
+}
+.cara-foot {
+  background-color: rgb(253, 186, 165);
+  position: absolute;
+  width: 80px; /* Ancho del cubo */
+  height: 200px; /* Alto del cubo */
+  border: 1px solid #000;
+}
+
+.cara-foot.cara-frontal {
+  height: 100px;
+  transform: translateZ(100px);
+}
+
+.cara-foot.cara-trasera {
+  height: 100px;
+  transform: rotateY(180deg) translateZ(100px); /* Profundidad del cubo */
+}
+
+.cara-foot.cara-superior {
+  transform: rotateX(90deg) translateZ(100px); /* La mitad de la profundidad */
+}
+
+.cara-foot.cara-inferior {
+  transform: rotateX(-90deg) translateZ(-0px); /* La mitad de la profundidad */
+}
+
+.cara-foot.cara-izquierda {
+  width: 200px;
+  height: 100px;
+  transform: rotateY(-90deg) translateZ(100px); /* La mitad de la profundidad */
+}
+
+.cara-foot.cara-derecha {
+  width: 200px;
+  height: 100px;
+  transform: rotateY(90deg) translateZ(-20px); /* La mitad de la profundidad */
+}
+
+/* @keyframes movehead {
+  0% {
+    transform: rotateZ(90deg) rotateX(-130deg) rotateY(180deg);
+  }
+  50% {
+    transform: rotateZ(92deg) rotateX(-132deg) rotateY(184deg);
+  }
+  100% {
+    transform: rotateZ(90deg) rotateX(-130deg) rotateY(180deg);
+  }
+} */
