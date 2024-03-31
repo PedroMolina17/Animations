@@ -3,7 +3,6 @@ body {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-
   height: 100vh;
   overflow: hidden;
 }
@@ -42,8 +41,24 @@ Cabeza
 
 .cara-frontal {
   transform: translateZ(100px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.ear {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80px;
+  height: 80px;
+  background-color: #f79d81;
 }
 
+.ear-pool {
+  width: 35px;
+  height: 15px;
+  background-color: #fa8c6b;
+}
 .cara-superior {
   transform: rotateX(90deg) translateZ(100px);
   position: absolute;
@@ -83,7 +98,6 @@ Cabeza
   background-color: black;
   position: absolute;
   top: 0%;
-  animation: moveEyeRight 5s infinite linear;
 }
 
 .ojo-container-left {
@@ -104,7 +118,6 @@ Cabeza
   background-color: black;
   position: absolute;
   top: 50%;
-  animation: moveEyeLeft 5s infinite linear;
 }
 
 /* Boca*/
@@ -151,7 +164,7 @@ Cabeza
 .cara-mouth.cara-inferior {
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
   transform: rotateX(90deg) translateZ(25px); /* Mueve la cara al centro del cubo */
 }
 
@@ -168,11 +181,10 @@ Cabeza
 }
 
 .pool1 {
-  width: 20px;
-  height: 20px;
+  width: 30px;
+  height: 25px;
   top: 20px;
-  background-color: #f79d81;
-  animation: movePool1 5s infinite linear;
+  background-color: #ed8f72;
 }
 /* 
  Cuerpo 
@@ -220,7 +232,7 @@ Cabeza
   transform: rotateX(-90deg) translateZ(-50px); /* La mitad de la profundidad */
 }
 
-.cara-body.cara-superior .line {
+.cara-body.cara-superior .line1 {
   position: absolute;
   background-color: #f79d81;
   width: 30px;
@@ -260,7 +272,7 @@ Cabeza
   height: 200px; /* Alto del cubo */
   transform: rotateY(90deg) translateZ(-50px); /* La mitad de la profundidad */
 }
-.cara-body.cara-derecha .line {
+.cara-body.cara-derecha .line1 {
   background-color: #f79d81;
   width: 400px;
   height: 30px;
@@ -357,7 +369,24 @@ Cabeza
   transform: rotateY(90deg) translateZ(-20px); /* La mitad de la profundidad */
 }
 
-@keyframes moveHeada {
+.cara-foot.cara-superior .line-foot {
+  width: 20px;
+  height: 25px;
+  background-color: #bc9292;
+  position: absolute;
+  bottom: 0px;
+  left: 10px;
+}
+.cara-foot.cara-superior .line-foot2 {
+  width: 20px;
+  height: 25px;
+  background-color: #bc9292;
+  position: absolute;
+  bottom: 0px;
+  left: 40px;
+}
+
+@keyframes moveHead {
   0% {
     transform: rotateZ(90deg) rotateX(-130deg) rotateY(180deg);
   }
@@ -378,28 +407,5 @@ Cabeza
   }
   100% {
     transform: translateX(5px);
-  }
-}
-
-@keyframes moveEyeLeft {
-  0% {
-    transform: translateY(-5px);
-  }
-  50% {
-    transform: translateY(0px);
-  }
-  100% {
-    transform: translateY(-5px);
-  }
-}
-@keyframes moveEyeRight {
-  0% {
-    transform: translateY(5px);
-  }
-  50% {
-    transform: translateY(0px);
-  }
-  100% {
-    transform: translateY(5px);
   }
 }
