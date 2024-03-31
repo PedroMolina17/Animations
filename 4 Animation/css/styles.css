@@ -2,12 +2,15 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
+
   height: 100vh;
   overflow: hidden;
 }
 
 .pig {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
@@ -15,14 +18,15 @@ body {
 Cabeza
 */
 .cubo-head {
-  background-color: rgb(241, 197, 227);
+  background-color: #fdbaa5;
   width: 200px;
   height: 200px;
-  top: -200px;
+  top: 400px;
+  right: 200px;
   position: relative;
   transform-style: preserve-3d;
   transform: rotateZ(100deg) rotateX(-140deg) rotateY(190deg);
-  /* animation: movehead 5s infinite linear; */
+  animation: moveHead 4s infinite linear;
 }
 
 .cara {
@@ -33,7 +37,7 @@ Cabeza
   text-align: center;
   line-height: 200px;
   font-size: 20px;
-  background-color: rgb(253, 186, 165);
+  background-color: #fdbaa5;
 }
 
 .cara-frontal {
@@ -79,6 +83,7 @@ Cabeza
   background-color: black;
   position: absolute;
   top: 0%;
+  animation: moveEyeRight 5s infinite linear;
 }
 
 .ojo-container-left {
@@ -99,6 +104,7 @@ Cabeza
   background-color: black;
   position: absolute;
   top: 50%;
+  animation: moveEyeLeft 5s infinite linear;
 }
 
 /* Boca*/
@@ -127,7 +133,7 @@ Cabeza
   height: 100%;
   background-color: rgb(253, 186, 165);
   border: 1px solid #000;
-  box-sizing: border-box; /* Incluye el borde en las dimensiones */
+  box-sizing: border-box;
 }
 
 .cara-mouth.cara-frontal {
@@ -143,6 +149,9 @@ Cabeza
 }
 
 .cara-mouth.cara-inferior {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
   transform: rotateX(90deg) translateZ(25px); /* Mueve la cara al centro del cubo */
 }
 
@@ -158,6 +167,13 @@ Cabeza
   transform: rotateY(90deg) translateZ(70px); /* Mueve la cara al centro del cubo */
 }
 
+.pool1 {
+  width: 20px;
+  height: 20px;
+  top: 20px;
+  background-color: #f79d81;
+  animation: movePool1 5s infinite linear;
+}
 /* 
  Cuerpo 
 */
@@ -165,7 +181,7 @@ Cabeza
   width: 200px;
   height: 200px;
   position: relative;
-  bottom: 50px;
+  top: 300px;
   left: -50px;
   z-index: -10;
   transform-style: preserve-3d;
@@ -236,17 +252,36 @@ Cabeza
 }
 
 .cara-body.cara-derecha {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
   width: 500px; /* Ancho del cubo */
   height: 200px; /* Alto del cubo */
   transform: rotateY(90deg) translateZ(-50px); /* La mitad de la profundidad */
+}
+.cara-body.cara-derecha .line {
+  background-color: #f79d81;
+  width: 400px;
+  height: 30px;
+}
+.cara-body.cara-derecha .line2 {
+  background-color: #f79d81;
+  width: 200px;
+  height: 30px;
+}
+.cara-body.cara-derecha .line3 {
+  background-color: #f79d81;
+  width: 400px;
+  height: 30px;
 }
 
 /*Pies 
  */
 
 .cubo-foot-right {
-  left: -290px;
-  top: 70px;
+  left: -150px;
+  top: 220px;
   z-index: -20;
   width: 100px; /* Ancho del cubo */
   height: 200px; /* Alto del cubo */
@@ -255,8 +290,8 @@ Cabeza
   transform: rotateZ(90deg) rotateX(-130deg) rotateY(80deg);
 }
 .cubo-foot-left {
-  top: 90px;
-  left: -290px;
+  top: 40px;
+  left: -80px;
   z-index: -20;
   width: 100px; /* Ancho del cubo */
   height: 200px; /* Alto del cubo */
@@ -265,8 +300,8 @@ Cabeza
   transform: rotateZ(90deg) rotateX(-130deg) rotateY(80deg);
 }
 .cubo-foot-right-back {
-  top: 60px;
-  left: -250px;
+  top: -180px;
+  left: 100px;
   z-index: -20;
   width: 100px; /* Ancho del cubo */
   height: 200px; /* Alto del cubo */
@@ -275,8 +310,8 @@ Cabeza
   transform: rotateZ(90deg) rotateX(-130deg) rotateY(80deg);
 }
 .cubo-foot-left-back {
-  top: 40px;
-  left: -380px;
+  top: -400px;
+  left: 10px;
   z-index: -30;
   width: 100px; /* Ancho del cubo */
   height: 200px; /* Alto del cubo */
@@ -322,7 +357,7 @@ Cabeza
   transform: rotateY(90deg) translateZ(-20px); /* La mitad de la profundidad */
 }
 
-/* @keyframes movehead {
+@keyframes moveHeada {
   0% {
     transform: rotateZ(90deg) rotateX(-130deg) rotateY(180deg);
   }
@@ -332,4 +367,39 @@ Cabeza
   100% {
     transform: rotateZ(90deg) rotateX(-130deg) rotateY(180deg);
   }
-} */
+}
+
+@keyframes movePool1 {
+  0% {
+    transform: translateX(5px);
+  }
+  50% {
+    transform: translateX(0px);
+  }
+  100% {
+    transform: translateX(5px);
+  }
+}
+
+@keyframes moveEyeLeft {
+  0% {
+    transform: translateY(-5px);
+  }
+  50% {
+    transform: translateY(0px);
+  }
+  100% {
+    transform: translateY(-5px);
+  }
+}
+@keyframes moveEyeRight {
+  0% {
+    transform: translateY(5px);
+  }
+  50% {
+    transform: translateY(0px);
+  }
+  100% {
+    transform: translateY(5px);
+  }
+}
