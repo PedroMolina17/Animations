@@ -5,6 +5,9 @@ body {
   flex-direction: column;
   height: 100vh;
   overflow: hidden;
+  background-image: url("https://i.pinimg.com/originals/09/6f/be/096fbe5269d2fae069305fe2742d5be5.jpg");
+  background-size: cover;
+  background-position: center;
 }
 
 .pig {
@@ -47,6 +50,7 @@ Cabeza
 }
 .ear {
   display: flex;
+  position: relative;
   align-items: center;
   justify-content: center;
   width: 80px;
@@ -55,10 +59,19 @@ Cabeza
 }
 
 .ear-pool {
-  width: 35px;
-  height: 15px;
+  width: 40px;
+  height: 25px;
   background-color: #fa8c6b;
 }
+
+.ear-pool2 {
+  position: absolute;
+  width: 30px;
+  height: 35px;
+  top: 0;
+  background-color: #fa8c6b;
+}
+
 .cara-superior {
   transform: rotateX(90deg) translateZ(100px);
   position: absolute;
@@ -384,6 +397,41 @@ Cabeza
   position: absolute;
   bottom: 0px;
   left: 40px;
+}
+
+.grass-container {
+  position: absolute;
+  top: 570px;
+  z-index: 10;
+  filter: hue-rotate(-20deg);
+  filter: grayscale(50%);
+}
+
+.grass-container .img-grass1 {
+  position: absolute;
+  left: 400px;
+  z-index: 100;
+}
+
+.grass-container .img-grass2 {
+  position: absolute;
+  left: 500px;
+  z-index: 100;
+}
+
+.grass-container .img-grass3 {
+  position: absolute;
+  left: 700px;
+  z-index: 100;
+}
+
+.carrot {
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  top: 570px;
+  left: 390px;
+  z-index: 100;
 }
 
 @keyframes moveHead {
