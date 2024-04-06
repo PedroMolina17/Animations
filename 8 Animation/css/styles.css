@@ -1,0 +1,48 @@
+body {
+  background-color: bisque;
+  display: flex;
+  flex-direction: column;
+
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  gap: 8px;
+  border: 1px solid;
+  padding: 10px;
+  background-color: aliceblue;
+}
+.container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: inherit;
+  filter: blur(50px);
+  opacity: 0.01;
+  border-radius: inherit;
+  z-index: -1; /* Asegura que el pseudo-elemento esté detrás del contenido */
+}
+
+.container-img {
+  width: 200px;
+  height: 180px;
+  overflow: hidden;
+  border-radius: 50%;
+}
+
+.container img {
+  width: 200px;
+  height: 180px;
+  background-position: center;
+  object-fit: cover;
+  transform: scale(1.2);
+  overflow: hidden;
+  border-radius: 50%;
+}

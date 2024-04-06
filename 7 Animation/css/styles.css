@@ -10,6 +10,7 @@ body {
   position: relative;
   width: 300px;
   height: 400px;
+  overflow: visible;
 }
 
 .imgBx {
@@ -34,17 +35,6 @@ img {
   opacity: 0;
 }
 
-.c3d {
-  position: absolute;
-  object-fit: contain;
-  opacity: 0;
-  transition: 0.5s;
-  transform: translateY(0);
-  z-index: 10;
-  width: 350px;
-  height: 400px;
-}
-
 .card:hover .c3d {
   opacity: 1;
   transform: translateY(-25%);
@@ -63,13 +53,14 @@ img {
   line-height: 50px;
   transition: transform 0.5s;
   opacity: 0;
+  font-weight: bold;
 }
 
 .card:nth-child(1) h2 {
   background-image: linear-gradient(
     to right,
-    rgb(233, 181, 48),
-    rgb(245, 208, 82)
+    rgb(239, 209, 85),
+    rgb(239, 209, 85)
   );
 }
 
