@@ -1,38 +1,51 @@
 body {
-  background-color: bisque;
   display: flex;
   flex-direction: column;
-
   justify-content: center;
+  height: 100vh;
+  overflow: hidden;
   align-items: center;
+  background-image: url("https://wallpapercave.com/wp/wp3102477.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
 .container {
+  width: 340px;
   display: flex;
+  justify-content: center;
+  align-items: center;
   position: relative;
   flex-direction: column;
-  gap: 8px;
-  border: 1px solid;
-  padding: 10px;
-  background-color: aliceblue;
+  overflow: hidden;
+  gap: 1px;
+  padding: 50px 45px;
+  border-radius: 4px;
+  background: inherit;
 }
+
 .container::before {
-  content: "";
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: inherit;
-  filter: blur(50px);
-  opacity: 0.01;
-  border-radius: inherit;
-  z-index: -1; /* Asegura que el pseudo-elemento esté detrás del contenido */
+  content: "";
+  width: 400px;
+  height: 400px;
+  filter: blur(39px);
+  background: inherit;
+}
+
+.container > * {
+  z-index: 10;
 }
 
 .container-img {
-  width: 200px;
-  height: 180px;
+  width: 180px;
+  height: 160px;
   overflow: hidden;
   border-radius: 50%;
 }
@@ -43,6 +56,56 @@ body {
   background-position: center;
   object-fit: cover;
   transform: scale(1.2);
-  overflow: hidden;
   border-radius: 50%;
+}
+
+.container input {
+  height: 15px;
+  outline: none;
+  border-color: transparent;
+  padding: 6px;
+  width: 220px;
+  border-radius: 5px;
+}
+
+.container input::placeholder {
+  color: #f8fafa;
+}
+
+.container input:focus {
+  border: 3px solid #f8fafa;
+}
+
+.container h4 {
+  text-align: center;
+  color: aliceblue;
+}
+
+.container-input {
+  display: flex;
+  background-color: #f8fafa;
+  border-radius: 5px;
+  border-color: transparent;
+}
+
+.container button img {
+  width: 10px;
+  height: 10px;
+  background-color: transparent;
+}
+
+.container button {
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  border-color: transparent;
+  border-left: 1px solid rgb(161, 156, 156);
+  border-radius: 0 5px 5px 0;
+}
+
+.container button:hover {
+  background-color: rgb(236, 234, 234);
+  overflow: hidden;
 }
