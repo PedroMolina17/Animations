@@ -5,7 +5,7 @@ body {
   height: 100vh;
   overflow: hidden;
   align-items: center;
-  background-image: url("https://wallpapercave.com/wp/wp3102477.jpg");
+  background-image: url("https://images.pexels.com/photos/1367192/pexels-photo-1367192.jpeg?auto=compress&cs=tinysrgb&w=1800");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -21,7 +21,7 @@ body {
   flex-direction: column;
   overflow: hidden;
   gap: 1px;
-  padding: 50px 45px;
+  padding: 40px 10px;
   border-radius: 4px;
   background: inherit;
 }
@@ -45,17 +45,19 @@ body {
 
 .container-img {
   width: 180px;
-  height: 160px;
+  height: 180px;
   overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   border-radius: 50%;
 }
 
 .container img {
   width: 200px;
-  height: 180px;
+  height: 200px;
   background-position: center;
   object-fit: cover;
-  transform: scale(1.2);
   border-radius: 50%;
 }
 
@@ -64,7 +66,6 @@ body {
   outline: none;
   border-color: transparent;
   padding: 6px;
-  width: 220px;
   border-radius: 5px;
 }
 
