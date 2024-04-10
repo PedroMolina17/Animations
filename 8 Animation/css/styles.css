@@ -15,6 +15,7 @@ body {
 .container {
   width: 340px;
   display: flex;
+  border: 1px solid rgba(255, 255, 255, 0.1);
   justify-content: center;
   align-items: center;
   position: relative;
@@ -35,7 +36,7 @@ body {
   content: "";
   width: 400px;
   height: 400px;
-  filter: blur(39px);
+  filter: blur(10px);
   background: inherit;
 }
 
