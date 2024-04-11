@@ -1,14 +1,37 @@
 body {
   height: 100vh;
-  background-image: url("https://cdns-images.dzcdn.net/images/cover/e4331f55c8bc6e778b7285b4e928b44c/264x264.jpg");
   background-size: cover;
   display: flex;
+  margin: 0;
   justify-content: center;
   align-items: center;
 }
 
+.found {
+  height: 100vh;
+  background-image: url("https://cdns-images.dzcdn.net/images/cover/e4331f55c8bc6e778b7285b4e928b44c/264x264.jpg");
+  background-size: cover;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.found::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  content: "";
+  filter: blur(10px);
+  opacity: 1;
+  background: inherit;
+  z-index: 1;
+}
+
 .container {
-  height: 400px;
+  height: 500px;
   width: 400px;
   background-size: contain;
   border-radius: 40px;
@@ -16,6 +39,9 @@ body {
   position: relative;
   padding: 10px;
   overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .container::before {
@@ -25,18 +51,20 @@ body {
   right: 0;
   bottom: 0;
   content: "";
-  filter: blur(50px);
-  opacity: 0.01;
+  filter: blur(10px);
+  opacity: 1;
   background: inherit;
-  z-index: -1;
+  z-index: 1;
 }
 
 .container .container-img {
   position: absolute;
   border-radius: 40px;
-  background-size: contain;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   background-image: inherit;
-  height: 400px;
-  width: 400px;
+  height: 480px;
+  width: 380px;
   z-index: 1;
 }

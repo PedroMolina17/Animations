@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aislinn - IA en WhatsApp</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Aislinn - IA en WhatsApp</h1>
+    </header>
+
+    <nav>
+      <ul>
+        <li><a href="sobre_aislinn.html">Sobre Aislinn</a></li>
+        <li><a href="servicios.html">Servicios</a></li>
+        <li><a href="proyectos.html">Proyectos</a></li>
+        <li><a href="galeria.html">Galería</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+        <li>
+          <a
+            href="https://api.whatsapp.com/send?phone=+51902513998&text=Hola%20Aislinn"
+            target="_blank"
+            >WhatsApp</a
+          >
+        </li>
+      </ul>
+    </nav>
+
+    <section id="about">
+      <p>
+        Descubre quién es Aislinn y cómo puede ayudarte en tus tareas diarias.
+      </p>
+      <a href="sobre_aislinn.html" class="button">Sobre Aislinn</a>
+    </section>
+
+    <section id="services">
+      <p>
+        Explora los servicios ofrecidos por Aislinn para facilitar tu vida y
+        mejorar tu productividad.
+      </p>
+      <a href="servicios.html" class="button">Servicios</a>
+    </section>
+
+    <section id="projects">
+      <p>
+        Conoce los proyectos en los que Aislinn ha participado y cómo ha ayudado
+        a sus clientes.
+      </p>
+      <a href="proyectos.html" class="button">Proyectos</a>
+    </section>
+
+    <section id="gallery">
+      <p>
+        Explora la galería de imágenes que muestran a Aislinn en acción y
+        algunos momentos destacados de sus proyectos.
+      </p>
+      <a href="galeria.html" class="button">Galería</a>
+    </section>
+
+    <section id="contact">
+      <h2>Contacto</h2>
+      <p>Puedes contactar a Aislinn a través de WhatsApp:</p>
+      <p>Número de WhatsApp: +51902513998</p>
+      <p>O puedes enviarnos un mensaje utilizando el siguiente formulario:</p>
+      <form action="enviar.php" method="post">
+        <label for="name">Nombre:</label>
+        <input type="text" id="name" name="name" required />
+        <label for="email">Correo electrónico:</label>
+        <input type="email" id="email" name="email" required />
+        <label for="message">Mensaje:</label>
+        <textarea id="message" name="message" required></textarea>
+        <button type="submit">Enviar</button>
+      </form>
+    </section>
+
+    <section id="additional-info">
+      <a href="privacy.html">Política de Privacidad</a>
+      <a href="terms.html">Términos de Servicio</a>
+      <a href="contacto.html">Información de Contacto</a>
+    </section>
+  </body>
+</html>
