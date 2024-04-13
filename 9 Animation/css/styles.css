@@ -58,13 +58,33 @@ body {
 }
 
 .container .container-img {
+  top: 20px;
   position: absolute;
   border-radius: 40px;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   background-image: inherit;
-  height: 480px;
+  height: 320px;
   width: 380px;
   z-index: 1;
+}
+
+.container .container-audio {
+  width: 100%;
+  position: absolute;
+  justify-content: center;
+  z-index: 1;
+  bottom: 50px;
+  color: white;
+}
+
+.found .container-buttons {
+  width: 100%;
+  justify-content: space-around;
+  align-items: center;
+}
+
+audio {
+  background-color: transparent;
 }
