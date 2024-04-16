@@ -78,7 +78,7 @@ body {
 }
 
 .container .container-audio p {
-  font-size: large;
+  font-size: x-large;
   font-family: "Roboto", sans-serif;
   font-weight: 500;
 }
@@ -93,4 +93,49 @@ body {
 
 audio {
   background-color: transparent;
+}
+
+.container-duration {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  font-size: 15px;
+  font-weight: bold;
+  margin: 4px 0px;
+}
+
+.container-duration .container-numbers {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 10px;
+}
+
+/*Deslizador*/
+input[type="range"] {
+  width: 100%;
+}
+
+input[type="range"] {
+  -webkit-appearance: none;
+}
+
+input[type="range"]::-webkit-slider-runnable-track {
+  height: 0.35em;
+  background: white;
+  border: none;
+  border-radius: 3px;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  border: none;
+  height: 1.1em;
+  width: 1.1em;
+  border-radius: 50%;
+  background: white;
+  margin-top: -4px;
+}
+
+input[type="range"]:focus {
+  outline: none;
 }
