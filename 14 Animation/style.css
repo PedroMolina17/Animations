@@ -1,28 +1,62 @@
 body {
   background-color: darkgrey;
-  color: white;
-  height: 900px;
-  font-size: large;
+}
+
+.container-screen {
+  display: flex;
+}
+
+.container-container {
+  display: flex;
+  width: 100vw;
+  flex-direction: column;
+  background-color: yellow;
 }
 
 .container-1 {
   background-color: aqua;
+  position: sticky;
+  top: 0px;
+  height: 100px;
+  width: 100%;
 }
 
 .container-2 {
+  position: sticky;
+  top: 100px;
   background-color: aquamarine;
+  height: 300px;
+  width: 100%;
 }
 
 .container-3 {
   background-color: bisque;
+  height: 300px;
 }
 
 .container-4 {
   background-color: brown;
+  height: 300px;
+}
+.container-5 {
+  background-color: chocolate;
+  height: 300px;
 }
 
 .container-sticky {
-  position: sticky;
-  top: 0px;
   background-color: black;
+  height: 100px;
+}
+.container-sticky2 {
+  background-color: rgb(255, 255, 255);
+  height: 100px;
+}
+
+.sidebar {
+  display: flex;
+  background-color: darkgoldenrod;
+  flex-direction: column;
+  width: 90px;
+  top: 0;
+  left: 0;
 }
