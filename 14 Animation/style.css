@@ -1,0 +1,28 @@
+body {
+  background-color: darkgrey;
+  color: white;
+  height: 900px;
+  font-size: large;
+}
+
+.container-1 {
+  background-color: aqua;
+}
+
+.container-2 {
+  background-color: aquamarine;
+}
+
+.container-3 {
+  background-color: bisque;
+}
+
+.container-4 {
+  background-color: brown;
+}
+
+.container-sticky {
+  position: sticky;
+  top: 0px;
+  background-color: black;
+}
